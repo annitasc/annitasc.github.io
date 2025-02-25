@@ -6,13 +6,13 @@
     <title>CV Annita</title>
 <style>
     body{
-        background-color: #e7d1ff ;
+        background: linear-gradient(to right, #E7D1FF, #FFD1DC) ;
     }
     h1{
         font-family: cooper black ;
-        color : #702963;
+        color : #6f0091;
         text-align: center;
-        font-size: 250%;
+        font-size: 300%;
     }
 
     h2{
@@ -22,6 +22,36 @@
     h3{
         color: purple;
     }
+
+    ol {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+    }
+
+    ol li {
+            display: inline;
+            margin: 0 15px;
+    }
+
+    ol li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #702963;
+            transition: 0.3s;
+    }
+
+    ol li a:hover {
+            color: #FF69B4;
+            text-decoration: underline;
+    }
+
+    img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 10%;
+            box-shadow: 0px 0px 10px #702963;
+        }
 
     table {
             width: 70%;
@@ -38,30 +68,53 @@
 
     td {
             padding: 10px;
-            background: #d071fca4;
+            background: #f5ccfff5;
     }
+
+    .social-links {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        gap: 10px; 
+        margin-top: 20px;
+    }
+
+    .social-links a img {
+        width: 30px; 
+        height: 30px;
+        border-radius: 20%; 
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .social-links a img:hover {
+        transform: scale(1.2); 
+        opacity: 0.8;
+    }
+
 </style>
 </head>
 <body>
-    <marquee behavior="" direction="left" style="background-color: purple; color: white; padding: 5px; font-weight: bold; font-family: cooper black;">
-        Welcome to my CV, hope you can know me more
+    <marquee direction="left" style="background-color: purple; color: white; padding: 10px; font-family: cooper;">
+        Welcome to my CV, hope you can know me more !
     </marquee>
     
     <h1>Curriculum Vitae</font></h1>
-    <h2 align = "center"> <font face = "georgia" color = "#AA336A">Annita Puspita Suci</font></h2>
+    <h2 align = "center"> <font face = "blackadder itc" size = "10px">Annita Puspita Suci</font></h2>
     <hr border = "3" color = "purple">
 
     <font face = "century schoolbook">
-        <ul type ="square">
+        <ol type ="square">
             <li><a href="#profile">Profile</a></li>
             <li><a href="#pribadi">Informasi Pribadi</a></li>
             <li><a href="#pend">Pendidikan</a></li>
             <li><a href="#peng">Pengalaman</a></li>
             <li><a href="#ketr">Ketrampilan</a></li>
             <li><a href="#addr">Alamat</a></li>
-        </ul>
+            <li><a target = "_blank" href="https://drive.google.com/file/d/1whbNlb2dKolMEmIf2d-P6S3d51JiEXn0/view?usp=drive_link">
+                Portfolio</a></li>
+        </ol>
         <hr border = "3" color = "purple">
-        <!-- anchor link yang mengarahkan pengguna ke elemen dengan id="profile" di halaman yang sama. -->
+        
         <center>
         <h2 id ="profile" style ="color:purple;">Profile</h2>
         <img src="annita.jpg" title = "Annita Puspita Suci" alt="Foto Profil" width="300" style="border-radius: 25%;" >
@@ -77,14 +130,28 @@
             </tr>
         </table>
         
-        
+        <h3 align = "center">Contact Me</h3>
+        <div class = "social-links">
+            <a href="https://linkedin.com/in/annita-puspita-suci" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://instagram.com/tnwlws131" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://github.com/annitasc" target="_blank">
+                <img src="github.png" alt="GitHub">
+            </a>
+            <a href="mailto:annitapuspitasuci@gmail.com">
+                <img src="email.png" alt="Email">
+            </a>
+        </div>
+
         <hr border = "3" color = "purple">
         <h2 id = "pribadi">Informasi Pribadi</h2>
             <p><strong>Nama:</strong> Annita Puspita Suci</p>
             <p><strong>Tanggal Lahir:</strong> 03 Desember 2005</p>
             <p><strong>Email:</strong> annitapuspitasuci@gmail.com</p>
             <p><strong>Telepon:</strong> 087758739928</p>
-            <p><strong>LinkedIn:</strong> <a target="_blank" href=" https://linkedin.com/in/annita-puspita-suci">Klik di sini</a></p>
 
         <hr border = "3" color = "purple">
         <h2 id = "pend" >Pendidikan</h2>
@@ -137,16 +204,13 @@
         
         
         <hr border = "3" color = "purple"><h2 id = "addr" >Alamat</h2>
-        <!-- menyematkan hal web lain -->
+        <!-- iframe buat menyematkan hal web lain -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.4311746798767!2d112.61011610000003!3d-7.954315299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7883415dce0921%3A0x7bb72377612686a5!2sKOS%20PUTRI%20MURAH%202%20DEKAT%20UB%20MALANG%20(%20KOS%20PUTRI%20NYATA%202%20DEKAT%20UB%20MALANG)!5e0!3m2!1sid!2sid!4v1739856568487!5m2!1sid!2sid" 
         width="600" height="450" style="border:0;" loading="lazy" ></iframe>
-        <!-- Lazy : Menunda pemuatan iframe sampai pengguna menggulir ke bagian tersebut (menghemat bandwidth). -->
 
-        <center>
-            <h3>Find Me on <a target="_blank" href="https://instagram.com/tnwlws131">Instagram</a></h3>
         
-            <h3>Curious about my portfolio? <a target = "_blank" href="https://drive.google.com/file/d/1whbNlb2dKolMEmIf2d-P6S3d51JiEXn0/view?usp=drive_link">click here</a> </h3>
-        </center>
+        <h3 align = "center"> Curious about my portfolio? <a target = "_blank" href="https://drive.google.com/file/d/1whbNlb2dKolMEmIf2d-P6S3d51JiEXn0/view?usp=drive_link">click here</a> </h3>
+        
         
     </font>
 </body>
