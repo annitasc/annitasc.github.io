@@ -6,17 +6,26 @@
     <title>CV Annita</title>
 <style>
     body{
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin: 0;
+        flex-direction: column;
+        display: flex;
         background: linear-gradient(to right, #E7D1FF, #FFD1DC) ;
     }
     h1{
         font-family: cooper black ;
         color : #6f0091;
         text-align: center;
-        font-size: 300%;
+        font-size: 3.5em;
+        margin-bottom: 5px;
     }
 
     h2{
         color: purple;
+        text-align: center;
+        margin-bottom: 3px;
     }
 
     h3{
@@ -56,8 +65,11 @@
     table {
             width: 70%;
             margin: 20px auto;
-            border-collapse: collapse;
+            border-collapse: separate;
+            border-radius: 20px;
+            overflow: hidden;
             text-align: left;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     }
 
     th {
@@ -69,6 +81,44 @@
     td {
             padding: 10px;
             background: #f5ccfff5;
+    }
+
+    iframe {
+        display: block;
+        margin: auto;
+        border-radius: 15px; 
+        overflow: hidden;
+    }
+
+    .address-card {
+    background: white; /* Warna card */
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    width: fit-content; /* Menyesuaikan dengan konten */
+    margin: auto; /* Posisi tengah */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .container {
+        width: 80%;
+        max-width: 900px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        flex: 1;
     }
 
     .social-links {
@@ -90,6 +140,51 @@
         transform: scale(1.2); 
         opacity: 0.8;
     }
+    
+    .portfolio-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .portfolio-item {
+        background: linear-gradient(to right, #A4508B, #5D0E61);
+        border-radius: 20px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        max-width: 350px; 
+        margin: auto; 
+    }
+
+    .portfolio-item img {
+        width: 100%; 
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .portfolio-item p {
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 10px;
+        color: #fff;
+    }
+
+
+    .portfolio-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 20px; 
+    }
+
+    .portfolio-item:hover {
+        transform: scale(1.05);
+    }
+
 
 </style>
 </head>
@@ -98,11 +193,14 @@
         Welcome to my CV, hope you can know me more !
     </marquee>
     
-    <h1>Curriculum Vitae</font></h1>
-    <h2 align = "center"> <font face = "blackadder itc" size = "10px">Annita Puspita Suci</font></h2>
+    <h1>Curriculum Vitae</h1>
+    <h2 align = "center"> <font face = "blackadder itc" size = "6em">Annita Puspita Suci</font></h2>
+
     <hr border = "3" color = "purple">
 
+    <div class = "container">
     <font face = "century schoolbook">
+        <hr border = "3" color = "purple">
         <ol type ="square">
             <li><a href="#profile">Profile</a></li>
             <li><a href="#pribadi">Informasi Pribadi</a></li>
@@ -119,6 +217,7 @@
         <h2 id ="profile" style ="color:purple;">Profile</h2>
         <img src="annita.jpg" title = "Annita Puspita Suci" alt="Foto Profil" width="300" style="border-radius: 25%;" >
         </center>
+
         <table>
             <tr>
                 <th>Summary</th>
@@ -146,23 +245,28 @@
             </a>
         </div>
 
-        <hr border = "3" color = "purple">
-        <h2 id = "pribadi">Informasi Pribadi</h2>
-            <p><strong>Nama:</strong> Annita Puspita Suci</p>
-            <p><strong>Tanggal Lahir:</strong> 03 Desember 2005</p>
-            <p><strong>Email:</strong> annitapuspitasuci@gmail.com</p>
-            <p><strong>Telepon:</strong> 087758739928</p>
+        <br>
 
-        <hr border = "3" color = "purple">
-        <h2 id = "pend" >Pendidikan</h2>
-        <ul>
-            <li><strong>Universitas Brawijaya</strong> : Agustus 2024 - sekarang
-            <p>Program Studi Sistem Informasi</p></li>
-            <li><strong>SMAN 1 Kedungwaru</strong> : Juni 2021 - Mei 2024
-            <p>Jurusan Matematika dan IPA</p></li>
-        </ul>
+        <div class="row">
+            <div class = "card">
+                <h2 id = "pribadi">Informasi Pribadi</h2>
+                <p><strong>Nama:</strong> Annita Puspita Suci</p>
+                <p><strong>Tanggal Lahir:</strong> 03 Desember 2005</p>
+                <p><strong>Email:</strong> annitapuspitasuci@gmail.com</p>
+            </div>
 
-        <hr border = "3" color = "purple">
+            <div class = "card">
+                <h2 id = "pend" >Pendidikan</h2>
+                <ul>
+                    <li><strong>Universitas Brawijaya</strong> : Agustus 2024 - sekarang
+                    <p>Program Studi Sistem Informasi</p></li>
+                    <li><strong>SMAN 1 Kedungwaru</strong> : Juni 2021 - Mei 2024
+                    <p>Jurusan Matematika dan IPA</p></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class = "card" style="margin-top: 20px;">
         <h2 id="peng" >Pengalaman</h2>
             <ul>
                 <li><p><strong>Anggota Jurnalistik Club</strong> <i>(Divisi Kreatif)</i> : 2018 - 2020</p></li>
@@ -173,10 +277,18 @@
                 <li><p><strong>Volunteer Smariduta Campus Expo</strong> <i>(Sharing Class Mentor)</i> : 2025</p></li>
                 <li><p><strong>Volunteer Smariduta Youth Carnival</strong> <i>(Booth Keeper)</i> : 2022</p></li>
             </ul>
-        
-        <hr border = "3" color = "purple"><h2 id = "ketr" >Keterampilan</h2>
-        <table
-        <tr></tr>
+        </div>
+        <br>
+        <div class="address-card">
+            <h2 id = "addr" >Alamat</h2>
+            <br>
+            <!-- iframe buat menyematkan hal web lain -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.4311746798767!2d112.61011610000003!3d-7.954315299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7883415dce0921%3A0x7bb72377612686a5!2sKOS%20PUTRI%20MURAH%202%20DEKAT%20UB%20MALANG%20(%20KOS%20PUTRI%20NYATA%202%20DEKAT%20UB%20MALANG)!5e0!3m2!1sid!2sid!4v1739856568487!5m2!1sid!2sid" 
+            width="600" height="400" style="border:0;" loading="lazy" align = "center" ></iframe>
+        </div> 
+        <br>
+        <h2 id = "ketr" >Keterampilan</h2>
+
         <table >
             <tr>
                 <th align="left"><b><i>Technical Skills</i></b></th>
@@ -201,17 +313,25 @@
                 </td>
             </tr>
         </table>
-        
-        
-        <hr border = "3" color = "purple"><h2 id = "addr" >Alamat</h2>
-        <!-- iframe buat menyematkan hal web lain -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.4311746798767!2d112.61011610000003!3d-7.954315299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7883415dce0921%3A0x7bb72377612686a5!2sKOS%20PUTRI%20MURAH%202%20DEKAT%20UB%20MALANG%20(%20KOS%20PUTRI%20NYATA%202%20DEKAT%20UB%20MALANG)!5e0!3m2!1sid!2sid!4v1739856568487!5m2!1sid!2sid" 
-        width="600" height="450" style="border:0;" loading="lazy" ></iframe>
+        <br>
+        <h2>Portfolio</h2>
+        <div class="portfolio-container">
+            
+            <div class="portfolio-item">
+                <img src="uidesign.png" alt="UI design">
+                <p>UI Design</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="infografis.png" alt="Infografis">
+                <p>Infografis</p>
+            </div>
+        </div>
 
+        <h2> Curious about my all portfolio? <a target = "_blank" href="https://drive.google.com/file/d/1whbNlb2dKolMEmIf2d-P6S3d51JiEXn0/view?usp=drive_link">click here</a> </h3>
         
-        <h3 align = "center"> Curious about my portfolio? <a target = "_blank" href="https://drive.google.com/file/d/1whbNlb2dKolMEmIf2d-P6S3d51JiEXn0/view?usp=drive_link">click here</a> </h3>
-        
-        
+        <br>
+
     </font>
+    </div>
 </body>
 </html>
